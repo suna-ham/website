@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+
+        <title>CLIO</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/clio2.css"/>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+		<script>
+		$(function(){
+			$('#best .tab1').css("display",'none');
+			$('#best .tab1').eq(0).css("display",'block');
+			$('.tab li a').css("color","#a5a5a5");
+			$('#best .tab li').eq(0).children().css("color","#000").css("border-bottom","1px solid #000");
+			$('.tab li').click(function(){
+				var k = $(this).index();
+				//alert(k);
+				$('.tab li').children().css("color","#a5a5a5").css("border-bottom","none");
+				$('.tab li').eq(k).children().css("color","#000").css("border-bottom","1px solid #000");
+				
+				$('.tab1').css("display",'none');
+				$('.tab1').eq(k).css("display",'block');
+			return false;	
+			});
+
+		
+
+			$('.clioVideo img').click(function(){
+
+				var i = $(this).index();
+				$('.video_box').eq(i).fadeIn();
+				$('.video_box').css('opacity','1').css('visibility','visible');
+				
+			});
+			$('.close.icon').click(function(){
+				$(this).parent('.video_box_cover').stop().animate({'top':'-200%'},1000,
+				function(){
+					$('.video_box').fadeOut();
+					$('.video_box').css('opacity','0').css('visibility','hidden');
+				
+				});
+					
+			});
+
+
+		});
+		</script>		
+    </head>
+    <body>
+        <header>
+            <div id="header_in">
+                <nav id="lnb_lang">
+                    <ul>
+                        <li><a href="#">KOR</a></li>
+                        <li><a href="#">ENG</a></li>
+                        <li><a href="#">CHN</a></li>
+                    </ul>
+                </nav>
+                <nav id="gnb">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><span></span></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><span></span></li>
+                        <li><a href="#">매장정보</a></li>
+                        <li><span></span></li>
+                        <li><a href="#">채용정보</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="logo"/>
+                </a>
+            </div>
+        </header>
+        <div id="lnb_bg">
+            <nav id="lnb" class="cf">
+                <ul>
+                    <li><a href="#">ABOUT CLIO</a>
+                        <ul>
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">매장 소개</a></li>
+                            <li><a href="#">공지&뉴스</a></li>
+                            <li><a href="#">채용 정보</a></li>
+                            <li><a href="#">㈜클리오 소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PRODUCT</a>
+                        <ul>
+                            <li><a href="#">베스트상품</a></li>
+                            <li><a href="#">신상품</a></li>
+                            <li><a href="#">페이스 메이크업</a></li>
+                            <li><a href="#">아이 메이크업</a></li>
+                            <li><a href="#">립 메이크업</a></li>
+                            <li><a href="#">네일</a></li>
+                            <li><a href="#">도구</a></li>
+                            <li><a href="#">스킨케어</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MEDIA</a>
+                        <ul>
+                            <li><a href="#">TV광고</a></li>
+                            <li><a href="#">메이크업룩</a></li>
+                            <li><a href="#">갤러리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PRO-TIP</a>
+                        <ul>
+                            <li><a href="#">클리오#VIDEO</a></li>
+                            <li><a href="#">메이크업팁</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COMMUNITY</a>
+                        <ul>
+                            <li><a href="#">베스트 리뷰</a></li>
+                            <li><a href="#">SNS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">EVENT</a>
+                        <ul>
+                            <li><a href="#">진행 이벤트</a></li>
+                            <li><a href="#">완료된 이벤트</a></li>
+                            <li><a href="#">당첨자 발표</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">IR</a>
+                        <ul>
+                            <li><a href="#">뉴스</a></li>
+                            <li><a href="#">전자공고</a></li>
+                            <li><a href="#">주가정보</a></li>
+                            <li><a href="#">재무정보</a></li>
+                            <li><a href="#">IR자료</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form action="" method="post">
+                    <div class="search">
+                        <input type="text" />	
+                        <a href="#"><img src="images/srch.png" /></a>
+                    </div>
+                </form>
+                <a href="#" class="star">
+                    <img src="images/star.png" />
+                </a>
+            
+            </nav>
+        </div>
+        <section class="cf">
+            <article id="main1">
+                <img src="images/top1.jpg" />         
+            </article>
+            <article id="new">
+                <h1>NEW ARRIVAL</h1>
+                <div class="content">
+                    <ul class="cf">
+                        <li><a href="#">
+                            <div class="bbox">
+                                <div class="tbox">멜팅 매트 립</div>
+                            </div>
+                            <img alt="img1-1" src="images/ko3.jpg" /></a></li>
+                        <li><a href="#">
+                            <div class="bbox">
+                            <div class="tbox">매드 매트 립</div>
+                        </div><img alt="img1-2" src="images/ko2.jpg" /></a></li>
+                        <li><a href="#">
+                            <div class="bbox">
+                                <div class="tbox">매드 벨벳 립</div>
+                            </div>
+                                <img alt="img1-3" src="images/ko4.jpg" />
+                            </a></li>
+                        <li><a href="#">
+                            <div class="bbox">
+                                <div class="tbox t4">프로 블러셔 팔레트</div>
+                            </div>
+                            <img alt="img1-4" src="images/ko1.jpg" /></a></li>
+                        </a></li>
+                    </ul>
+                </div>
+            </article>       
+			<article id="best" class="cf">
+				<h1>BEST REVIEW</h1>
+				<ul class="tab cf">
+					<li><a href="#">TOTAL</a></li>
+					<li><a href="#">FACE</a></li>
+					<li><a href="#">LIPE</a></li>
+					<li><a href="#">EYE</a></li>
+				</ul>
+				<ul class="tab1 cf">
+					<li>
+						<a href="#">
+							<img src="images/best1.jpg" alt="그림1"/>
+							<div>
+								<h3>킬래쉬 수퍼프루프 마스카라</h3>
+								<p>꼭 추천하는 마스카라<br/>&nbsp;</p>
+								<p>혜콩</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/best2.jpg" alt="그림2"/>
+							<div>
+								<h3>프로 아이 팔레트</h3>
+								<p>클리오 품절대란템으로 해본 설렘폭발 부드러운 메이크업</p>
+								<p>씨큐</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/best3.jpg" alt="그림3"/>
+							<div>
+								<h3>킬커버 에어리핏 컨실러</h3>
+								<p>클리오 킬커버 에어리핏 컨실러 & 누디즘 수분 커버쿠션으로 해본 간단 쉐딩메이크업!</p>
+								<p>리뷰하는 여자</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="tab1 cf">
+					<li>
+						<a href="#">
+							<img src="images/AQ5NMJGZF2YP2SA6TQ0G.jpg" alt="그림1"/>
+							<div>
+								<h3>[클리오] 킬커버 핑크광채 크림쿠션</h3>
+								<p>클리오 킬커버 핑크 광채 크림 쿠션으로 꿀잠잔듯 꿀잠광채 만들기<br/>&nbsp;</p>
+								<p>리미</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/RL0FV2ZA7ORMC64DDYB1.jpg" alt="그림2"/>
+							<div>
+								<h3>[클리오] 킬커버 핑크광채 크림쿠션</h3>
+								<p>클리오 가을 신상 킬커버 핑크 광채 크림 쿠션! 꿀잠잔 듯 광채쿠션</p>
+								<p>다미</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/DZZKAYYMACC1NTKDDNOO.jpg" alt="그림3"/>
+							<div>
+								<h3>킬커버 에어리핏 컨실러</h3>
+								<p>커버력 좋은 클리오 킬커버 에어리핏 컨실러</p>
+								<p>히슈</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="tab1 cf">
+					<li>
+						<a href="#">
+							<img src="images/BZFEEPMT7ZK0WKCWMU1M.jpg" alt="그림1"/>
+							<div>
+								<h3>매드 매트 립</h3>
+								<p>클리오 매드매트립/매드벨벳틴트 19FW 신규컬러 발색<br/>&nbsp;</p>
+								<p>베이니</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/A0V72KC5N06IXNX1WB8H (1).jpg" alt="그림2"/>
+							<div>
+								<h3>매드 매트 립</h3>
+								<p>클리오 가을시즌 매드 매트 립, 매드 벨벳 틴트 신상 출시!</p>
+								<p>응댕댕</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/SCXR2OGYNEMTGZBD9I0S.jpg" alt="그림3"/>
+							<div>
+								<h3>매드 매트 립</h3>
+								<p>클리오 신상립 멜팅 매트 립!</p>
+								<p>은빈</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="tab1 cf">
+					<li>
+						<a href="#">
+							<img src="images/B7GOYP7STR6VW2C7UBSR.jpg" alt="그림1"/>
+							<div>
+								<h3>프로 아이 팔레트</h3>
+								<p>프로 아이 팔레트 스트릿브릭 활용 아이메이크업 방법!<br/>&nbsp;</p>
+								<p>뎌이</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/DGEKZF9P1ZMPXEDJGN1O (1).jpg" alt="그림2"/>
+							<div>
+								<h3>프로 아이 팔레트</h3>
+								<p>클리오 프로 대즐링 아이 팔레트 출시!</p>
+								<p>디얼빈</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/SEPKKELBXQUC9HOBUCNX.jpg" alt="그림3"/>
+							<div>
+								<h3>프로 아이 팔레트</h3>
+								<p>클리오 리미티드 펄팔레트 25구 전색상 발색</p>
+								<p>래미</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</article>
+			<article id="video1">
+				<h1>CLIO VIDEO</h1>
+				<div class="clioVideo">
+					<img src="images/clio1.jpg" alt="그림4" />
+				</div>
+			</article>
+			<article id="sns" class="cf">
+				<h1>#CLIO@SNS</h1>
+				<div class="sns_left">
+					<ul class="sns_top cf">
+						<li>
+							<a href="#">
+								<div class="mbox">
+									<p>2019.12.19</p>
+									<p>꿉꿉한 날씨에 #브라운<br/>마스카라로 메이크업도<br/>부드럽고 깔끔하게!</p>
+									<p><img src="images/11.gif" width="20" height="20" alt="플러스" /></p>
+								</div>
+								<img src="images/01.jpg" alt="클리오1" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="mbox">
+									<p>2019.12.19</p>
+									<p>꿉꿉한 날씨에 #브라운<br/>마스카라로 메이크업도<br/>부드럽고 깔끔하게!</p>
+									<p><img src="images/11.gif" width="20" height="20" alt="플러스" /></p>
+								</div>
+								<img src="images/02.jpg" alt="클리오2" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="mbox">
+									<p>2019.12.19</p>
+									<p>꿉꿉한 날씨에 #브라운<br/>마스카라로 메이크업도<br/>부드럽고 깔끔하게!</p>
+									<p><img src="images/11.gif" width="20" height="20" alt="플러스" /></p>
+								</div>
+								<img src="images/03.jpg" alt="클리오3" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="mbox">
+									<p>2019.12.19</p>
+									<p>꿉꿉한 날씨에 #브라운<br/>마스카라로 메이크업도<br/>부드럽고 깔끔하게!</p>
+									<p><img src="images/11.gif" width="20" height="20" alt="플러스" /></p>
+								</div>
+								<img src="images/04.jpg" alt="클리오4" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="mbox">
+									<p>2019.12.19</p>
+									<p>꿉꿉한 날씨에 #브라운<br/>마스카라로 메이크업도<br/>부드럽고 깔끔하게!</p>
+									<p><img src="images/11.gif" width="20" height="20" alt="플러스" /></p>
+								</div>
+								<img src="images/05.jpg" alt="클리오5" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="mbox">
+									<p>2019.12.19</p>
+									<p>꿉꿉한 날씨에 #브라운<br/>마스카라로 메이크업도<br/>부드럽고 깔끔하게!</p>
+									<p><img src="images/11.gif" width="20" height="20" alt="플러스" /></p>
+								</div>
+								<img src="images/06.jpg" alt="클리오6" />
+							</a>
+						</li>
+					</ul>
+					<ul class="sns_bottom cf">
+						<li>
+							<a href="#">
+								<img src="images/07.jpg" alt="클리오7" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/08.jpg" alt="클리오8" />
+							</a>
+						</li>
+					</ul>	
+				</div>
+				<div class="sns_right">
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcliokr%2F&tabs=timeline&width=380&height=632&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="380" height="632" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+				</div>
+				<!-- 클리오 페이스북 방문 -->
+				<!-- 페이스북 주소 복사 -->
+				<!-- 크롬에 iframe facebook 검색 -->
+				<!-- 검색된 Page Plugin - Social Plugins - Facebook for Developers 클릭 -->
+				<!-- 1. url - 클리오 사이트 붙여넣기 -->
+				<!-- 2. 넓이 높이 입력-->
+				<!-- 3. 하단에 코드받기 누르기 -->
+				<!-- 4. 창뜨면 iframe 클릭 후 내용 복사 -->
+				<!-- 5. html에 붙여넣기 -->
+			</article>
+        </section>
+		<div id="f_lnb_bg" class="cf">
+			<nav id="f_lnb" class="cf">
+                <ul>
+                    <li><a href="#">ABOUT CLIO</a>
+                        <ul>
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">매장 소개</a></li>
+                            <li><a href="#">공지&뉴스</a></li>
+                            <li><a href="#">채용 정보</a></li>
+                            <li><a href="#">㈜클리오 소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PRODUCT</a>
+                        <ul>
+                            <li><a href="#">베스트상품</a></li>
+                            <li><a href="#">신상품</a></li>
+                            <li><a href="#">페이스 메이크업</a></li>
+                            <li><a href="#">아이 메이크업</a></li>
+                            <li><a href="#">립 메이크업</a></li>
+                            <li><a href="#">네일</a></li>
+                            <li><a href="#">도구</a></li>
+                            <li><a href="#">스킨케어</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MEDIA</a>
+                        <ul>
+                            <li><a href="#">TV광고</a></li>
+                            <li><a href="#">메이크업룩</a></li>
+                            <li><a href="#">갤러리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PRO-TIP</a>
+                        <ul>
+                            <li><a href="#">클리오#VIDEO</a></li>
+                            <li><a href="#">메이크업팁</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COMMUNITY</a>
+                        <ul>
+                            <li><a href="#">베스트 리뷰</a></li>
+                            <li><a href="#">SNS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">EVENT</a>
+                        <ul>
+                            <li><a href="#">진행 이벤트</a></li>
+                            <li><a href="#">완료된 이벤트</a></li>
+                            <li><a href="#">당첨자 발표</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">IR</a>
+                        <ul>
+                            <li><a href="#">뉴스</a></li>
+                            <li><a href="#">전자공고</a></li>
+                            <li><a href="#">주가정보</a></li>
+                            <li><a href="#">재무정보</a></li>
+                            <li><a href="#">IR자료</a></li>
+                        </ul>
+                    </li>
+					<li><a href="#">로그인</a>
+                        <ul>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">아이디찾기</a></li>
+                            <li><a href="#">비밀번호찾기</a></li>
+                            <li><a href="#">회원가입</a></li>
+                        </ul>
+                    </li>
+                </ul>          
+            </nav>
+		</div>
+		<div class="footer_t">
+			<div class="f_top cf">
+				<ul class="fleft cf">
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보취급방침</a></li>
+					<li><a href="#">채용정보</a></li>
+				</ul>
+				<ul class="fright cf">
+					<li><a href="#">FAMILY SITE</a></li>
+					<li><a href="#">클럽클리오</a></li>
+					<li><a href="#">페리페라</a></li>
+					<li><a href="#">구달</a></li>
+					<li><a href="#">힐링버드</a></li>
+					<li><a href="#">더마토리</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer_b">
+			<div class="f_b cf">
+				<div class="left1">
+					<img src="images/blogo.png" alt="로고2" />
+				</div>
+				<div class="left2">
+					<p>서울특별시 성동구 왕십리로 66 (주)클리오 / 대표이사 : 한현옥</p>
+					<p>COPYRIGHTS(C) 2016 CLUBCLIO.CO.LTD. ALL RIGHTS RESERVED</p>
+				</div>
+				<div class="right1">
+					<p>고객상담실 080-080-1510</p>
+					<p>상담안내시간 월~금 : 09:00~18:00(토/일/공휴일 휴무)</p>
+				</div>
+			</div>
+		</div>	
+		<div class="video_box">
+			<div class="video_box_cover">
+				<iframe src="http://www.youtube.com/embed/MyfjFZihDCQ"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+				
+				<div class="close icon"></div>
+			</div>
+		</div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
